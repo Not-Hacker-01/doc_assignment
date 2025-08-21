@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--srch-border-color:#929090;
+--srch-bg-color:#EFEFEF;
+--srch-placeholder-color:#737171;
+--header-bg-color:#fff;
+--header-text-color:#737171;
+--header-active-text-color:#1D1919;
+--status-tab-border-color:#EEEEEE;
+--in-active-text-color:#737171;
+--credits-bg:#FFEFE1;
+--key-highlight-border-color:#FFDAD8;
+--key-highlight-lower-text-color:#444242;
+--watch-now-bg:#1D1919;
+--watch-now-text-color:#fff;
+--white_bg:#fff;
+--danger_clr:#DC1313;
+--bottom-highlight:#D9F4F9;
+--live-bg:#E2504B;
+}
+body{
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 500px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 800px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 1200px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+
+.fs_10{
+  font-size: 10px;
+}
+.fs_14{
+  font-size: 14px;
+}
+
+.fs_16{
+  font-size: 16px;
+}
+
+.fs_18{
+  font-size: 18px;
+}
+
+// font sire for the headings 
+.fs_24{
+  font-size: 24px;
+}
+
+
+.view_all{
+  border: 1px solid var(--header-active-text-color);
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: max-content;
+}
+
+.credits{
+  background-color: var(--credits-bg);
+  padding: 3px 6px;
+  border-radius: 8px;
+  width: max-content;
+  font-size: 14px;
+  font-size: 500;
+}
+
+.key_highlight{
+  border: 1px solid var(--key-highlight-border-color);
+  border-radius: 8px;
+  padding: 8px 12px;
+  background:linear-gradient(180deg,#FFD8BD,#FFFFFF) ;
+  .upper_key{
+      color: var(--header-text-color);
+  }
+  .lower_key{
+      color: var(--key-highlight-lower-text-color);
+  }
+
+}
+
+.channel_name{
+  display: flex;
+  img{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+  }
+  p{
+      color: var(--header-text-color);
+  }
+}
+.video_details{
+  // padding: 1rem;
+  background-color: var(--white_bg);
+  border: 1px solid var(--status-tab-border-color);
+  border-width: 0 1px 1px 1px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  &.no_border_radius{
+    border-radius: 0;
+  }
+}
+
+.video_section{
+  border-top-left-radius: 8px;
+  overflow: hidden;
+  border-top-right-radius: 8px;
+
+  &.live{
+    &::after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: red;
+      bottom: 0;left: 0;
+    }
+  }
+
+}
+
+
+
+.watch_now{
+  background-color: var(--watch-now-bg);
+  color: var(--watch-now-text-color);
+  border-radius: 4px;
+  padding: .5rem;
+  &.notify_me{
+   padding: .5rem 1rem;
+  }
+}
+
+.overflow_text{
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.highlight_section_lower{
+  background-color: var(--bottom-highlight);
+  padding: 1rem;
+  // border-bottom-left-radius: 8px;
+  // border-bottom-right-radius: 8px;
+}
+
+
+
+.transparent_bg{
+  background-color: #1D191999;
+  &.size{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #1D191980;
+  }
+  &.video_time{
+      position: absolute;
+      bottom: .5rem;
+      right: .5rem;
+      background-color: rgba(29, 25, 25, 0.5019607843);
+      color: var(--white_bg);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+}
+

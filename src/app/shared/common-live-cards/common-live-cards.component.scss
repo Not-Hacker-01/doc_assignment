@@ -1,0 +1,103 @@
+
+
+
+.video_name{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--header-active-text-color);
+}
+
+.video_details{
+    background-color: var(--white_bg);
+    border: 1px solid var(--status-tab-border-color);
+    border-width: 0 1px 1px 1px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-height: 280px; // Fixed minimum height for consistency
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.inner_container{
+    &.bg_highlight{
+        background:linear-gradient(180deg,#FFD8BD,#FFFFFF) ;
+        border-radius: 4px;
+        padding: 1.5rem;
+        overflow-x: auto;
+        .row{
+            flex-wrap: nowrap;
+        }
+    }
+ 
+}
+
+// Ensure consistent card height
+.col-md-4 {
+    margin-bottom: 1rem;
+}
+
+.video_section {
+    height: 200px; // Fixed height for poster images
+    overflow: hidden;
+}
+
+// Make content area flexible to fill available space
+.video_details .p-3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video_name {
+    flex: 1; // Allow video name to expand
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.badge{
+ 
+   
+    padding: 3px 8px;
+    border-radius: 28px;
+
+    &.live{
+        background-color: var(--live-bg);
+        color: var(--white_bg);
+    }
+
+
+}
+.live_section{
+
+    top: .5rem;
+    left: .5rem;
+    position: absolute;
+
+}
+
+.controls{
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+
+
+
+.danger_expire{
+    color: var(--danger_clr);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.pending{
+    color: var(--in-active-text-color);
+    font-weight: 500;
+    font-size: 12px;
+}

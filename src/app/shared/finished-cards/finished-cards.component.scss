@@ -1,0 +1,56 @@
+.gray_dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--srch-border-color);
+}
+
+// Add consistent height constraints
+.video_details {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+}
+
+.video_section {
+    // height: 200px; // Fixed height for poster images
+    overflow: hidden;
+    &.live{
+        &::before{
+            position: absolute;
+            content: '';
+            width: 40%;
+            height: 2px;
+            background-color: #D0D0D0;
+            bottom: 0;right: 0;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 60%;
+            height: 2px;
+            background-color: red;
+            bottom: 0;left: 0;
+        }
+    }
+}
+
+.col-md-3 {
+    margin-bottom: 1rem;
+}
+
+// Make content area flexible
+.video_details .p-3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video_name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+}

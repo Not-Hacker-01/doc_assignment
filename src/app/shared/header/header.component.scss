@@ -1,0 +1,221 @@
+@import "../../../styles.scss";
+.navbar {
+  background-color: var(--header-bg-color);
+  height: 72px;
+}
+.navbar-collapse {
+  gap: 5rem;
+  &.collapse {
+    display: none;
+  }
+
+  &.show {
+    display: block;
+  }
+}
+
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+@include respond-to(sm) {
+  .navbar-nav {
+    margin-top: 1rem;
+    gap: 0 !important;
+  }
+
+  .navbar-collapse {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+    width: 100% !important;
+  }
+  
+  .search_input {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .header {
+    padding: 0 1rem !important;
+  }
+}
+.navbar-toggler {
+  border: 1px solid #dee2e6;
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.search_input {
+  position: relative;
+  border: 1px solid var(--srch-border-color);
+  border-radius: 12px;
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
+  input {
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: var(--srch-bg-color);
+    &::placeholder {
+      color: var(--srch-placeholder-color);
+    }
+    &:focus-visible{
+      outline: none;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+@include respond-to(sm) {
+  .nav-item {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+    width: 100% !important;
+    
+    svg {
+      order: 1 !important;
+      flex-shrink: 0 !important;
+    }
+    
+    p {
+      order: 2 !important;
+      margin: 0 !important;
+      text-align: left !important;
+    }
+    
+    &.active {
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+  
+  .navbar-nav {
+    gap: 0 !important;
+    width: 100% !important;
+  }
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--in-active-text-color);
+    transition: color 0.3s ease;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+    path {
+     
+      // stroke-width: 0.6px;
+      transition: fill 0.3s ease, stroke 0.3s ease;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+
+    p {
+      color: var(--header-active-text-color);
+    }
+
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  &.active {
+    svg {
+      transform: scale(1.1);
+      path {
+        fill: var(--header-active-text-color);
+        stroke: var(--header-active-text-color);
+        stroke-width: 0.1px;
+      }
+    }
+    p {
+      color: var(--header-active-text-color);
+      font-weight: 600;
+    }
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: var(--header-active-text-color);
+      bottom: -13px;
+      left: 0;
+      animation: slideIn 0.3s ease-out;
+    }
+  }
+}
+
+// Animation for the active indicator line
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+// Smooth transition for all tab changes
+.navbar-nav {
+  transition: all 0.3s ease;
+  gap: 3rem;
+}
+
+.post_btn {
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #252424, #252424, #424242);
+  padding: 0.5rem 1rem;
+  p {
+    color: var(--header-bg-color);
+  }
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  svg {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+  }
+}

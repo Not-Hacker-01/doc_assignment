@@ -1,0 +1,273 @@
+export const sections = [
+    {
+      type: 'Live Webinars',
+      status:"L",
+      bg_highlight:true,
+      cards: [
+        {
+          id: 1,
+          posterImage: '/poster1.png',
+          credits: 2,
+          videoName: 'Controversies in Bipolar 1 Disorder (BP-1): Implications for Asthama from',
+          channelImage: '/channel1.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Manage chronic and complex diseases',
+          isLive: true,
+          epxiringTime: '',
+          highlight:false,
+          watchNow:true,
+          video_time:'24:50',
+          is_unique:false
+        },
+        {
+          id: 2,
+          posterImage: '/half_img.png',
+          credits: 3,
+          videoName: 'Virus is like any other respiratory virus that causes common',
+          channelImage: '/channel2.png',
+          channelName: 'GSK',
+          keyHighlights: 'Latest cardiac procedures and treatments',
+          isLive: true,
+          epxiringTime: '23h 30m',
+          highlight:false,
+          watchNow:true,
+           video_time:'24:50',
+           is_unique:false
+        },
+        {
+          id: 3,
+          posterImage: '/half2.png',
+          credits: 1,
+          videoName: 'Virus is like any other respiratory virus that causes common',
+          channelImage: '/channel3.png',
+          channelName: 'Bayer',
+          keyHighlights: 'Emergency protocols for children',
+          isLive: true,
+          epxiringTime: '',
+          highlight:false,
+          watchNow:true,
+           video_time:'24:50',
+           is_unique:false
+        },
+        {
+          id: 3,
+          posterImage: '/poster3.png',
+          credits: 1,
+          videoName: 'Virus is like any other respiratory virus that causes common',
+          channelImage: '/channel3.png',
+          channelName: 'Bayer',
+          keyHighlights: 'Emergency protocols for children',
+          isLive: true,
+          epxiringTime: '',
+          highlight:false,
+          watchNow:true,
+           video_time:'24:50',
+           is_unique:false
+        },
+        {
+          id: 4,
+          posterImage: '/poster3.png',
+          credits: 1,
+          videoName: 'Virus is like any other respiratory virus that causes common',
+          channelImage: '/channel3.png',
+          channelName: 'Bayer',
+          keyHighlights: 'Emergency protocols for children',
+          isLive: true,
+          epxiringTime: '',
+          highlight:false,
+          watchNow:true,
+           video_time:'24:50',
+           is_unique:false
+        },
+        {
+          id: 5,
+          posterImage: '/poster3.png',
+          credits: 1,
+          videoName: 'Virus is like any other respiratory virus that causes common',
+          channelImage: '/channel3.png',
+          channelName: 'Bayer',
+          keyHighlights: 'Emergency protocols for children',
+          isLive: true,
+          epxiringTime: '',
+          highlight:false,
+          watchNow:true,
+           video_time:'24:50',
+           is_unique:false
+        }
+      ]
+    },
+    {
+      type: 'Upcoming Webinars',
+      status:"TBS",
+      bg_highlight:false,
+      cards: [
+        {
+          id: 1,
+          posterImage: '/upcoming1.jpg',
+          credits: 2,
+          videoName: 'The Covid19 Management of Parox Health caretine',
+          channelImage: '/channel1.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Manage chronic and complex diseases',
+          isLive: false,
+          epxiringTime: '23h 30m'    ,
+          streaming_time: '7 Jan 2025, 12:30 PM',
+          highlight:true,
+          watchNow:false,
+          is_unique:false
+        },
+        {
+          id: 2,
+          posterImage: '/upcoming2.png',
+          credits: 3,
+          videoName: 'Perspectives in The Covid19 Management of Parox Health',
+          channelImage: '/channel2.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Latest cardiac procedures and treatments',
+          isLive: false,
+          epxiringTime: '',
+          streaming_time: '7 Jan 2025, 12:30 PM',
+          highlight:true,
+          watchNow:false,
+          is_unique:false
+        },
+        {
+          id: 3,
+          posterImage: '/upcoming3.jpg',
+          credits: 1,
+          videoName: 'The Covid19 Management of Parox Health caretine',
+          channelImage: '/channel3.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Emergency protocols for children',
+          isLive: false,
+          epxiringTime: '',
+          streaming_time: '7 Jan 2025, 12:30 PM',
+          highlight:true,
+          watchNow:false,
+          is_unique:false
+        }
+      ]
+    },
+    {
+      type: 'Continue Watching',
+      status:"C",
+      bg_highlight:false,
+      cards: [
+          {
+            id: 1,
+            posterImage: '/continue1.jpg',
+            videoName: 'New Perspectives in The Covid19 Management',
+          time_left:'10 min',
+          channelName: 'PDGI Indonesia',
+            isLive: true,
+            video_time:'24:50'
+          },
+          {
+            id: 2,
+            posterImage: '/continue1.jpg',
+            videoName: ' Perspectives in The Covid19 Management ',
+          time_left:'10 min',
+          channelName: 'Bayer',
+            isLive: true,
+            video_time:'24:50'
+          },
+          {
+            id: 3,
+            posterImage: '/continue1.jpg',
+            videoName: 'New Perspectives in The 12',
+          time_left:'10 min',
+          channelName: 'PDGI Indonesia',
+            isLive: true,
+            video_time:'24:50'
+          },
+          {
+            id: 4,
+            posterImage: '/continue1.jpg',
+            videoName: 'New Perspectives in The 12',
+          time_left:'10 min',
+          channelName: 'PDGI Indonesia',
+            isLive: true,
+            video_time:'24:50'
+          },
+          {
+            id: 4,
+            posterImage: '/continue1.jpg',
+            videoName: ' New Perspectives in The Covid19 Management ',
+          time_left:'10 min',
+          channelName: 'PDGI Indonesia',
+            isLive: false,
+            video_time:'24:50'
+          },    
+          {
+            id: 4,
+            posterImage: '/continue1.jpg',
+            videoName: 'New Perspectives in The 12',
+          time_left:'10 min',
+          channelName: 'PDGI Indonesia',
+            isLive: false,
+            video_time:'24:50'
+          },
+          {
+            id: 4,
+            posterImage: '/continue1.jpg',
+            videoName: 'New Perspectives in The 12',
+          time_left:'10 min',
+          channelName: 'PDGI Indonesia',
+            isLive: false,
+            video_time:'24:50'
+          },
+          
+      ]
+    },
+    {
+      type: 'Webinars based on cardiology',
+      status:"",
+      bg_highlight:false,
+      cards: [
+        {
+          id: 1,
+          posterImage: '/continue1.jpg',
+          credits: 2,
+          videoName: 'The Covid19 Management of Parox Health caretine',
+          channelImage: '/channel1.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Manage chronic and complex diseases',
+          isLive: false,
+          epxiringTime: '',
+          highlight:false,
+          watchNow:true,
+          is_unique:true
+        },
+        {
+          id: 2,
+          posterImage: '/upcoming2.png',
+          credits: 3,
+          videoName: 'New Perspectives in The Covid19 Management of Parox Health caretine...',
+          channelImage: '/channel2.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Latest cardiac procedures and treatments',
+          isLive: false,
+          epxiringTime: '',
+          highlight:true,
+          watchNow:false,
+          is_unique:true
+        },
+        {
+          id: 3,
+          posterImage: '/half_img.png',
+          credits: 1,
+          videoName: 'Metapneumovirus is like any other respiratory virus that causes common',
+          channelImage: '/channel3.png',
+          channelName: 'PDGI Indonesia',
+          keyHighlights: 'Emergency protocols for children',
+          isLive: true,
+          epxiringTime: '23h 30m',
+          highlight:false,
+          watchNow:true,
+           video_time:'24:50',
+           is_unique:true
+        }
+      ]
+    },
+ 
+  ];

@@ -1,0 +1,38 @@
+.status_tabs{
+    border-bottom: 1px solid var(--status-tab-border-color);
+    
+    color: var(--in-active-text-color);
+    font-size: 16px;
+
+}
+
+.status_tab{
+    padding: 1rem;
+    position: relative;
+    &:hover{
+        color: var(--header-active-text-color);
+        cursor: pointer;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--header-active-text-color);
+        }
+    }
+    &.active{
+        color: var(--header-active-text-color);
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--header-active-text-color);
+        }
+    }
+}
