@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .gray_dot{
     width: 5px;
     height: 5px;
@@ -53,4 +55,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 1rem;
+}
+
+@include respond-to(sm) {
+    .outer_container{
+        padding:  1rem 0 ;
+    }
+}
+@include respond-to(md){
+    .row{
+        flex-wrap: wrap ;
+        row-gap: 1rem;
+    }
+    .col-sm-3{
+        width: 90%;
+    }
+
 }

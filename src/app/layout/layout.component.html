@@ -1,8 +1,8 @@
 <div class="layout-container d-flex flex-column">
   <app-header></app-header>
   
-  <main class="main-content">
-    <div class="content-wrapper d-flex flex-column">
+  <main class="main-content" >
+    <div class="content-wrapper d-flex flex-column" [ngClass]="screenWidth < 500 ? 'gap-0' : ''">
       <router-outlet />
     </div>
   </main>

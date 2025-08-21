@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .status_tabs{
     border-bottom: 1px solid var(--status-tab-border-color);
     
@@ -5,6 +7,8 @@
     font-size: 16px;
 
 }
+
+
 
 .status_tab{
     padding: 1rem;
@@ -36,3 +40,16 @@
         }
     }
 }
+
+
+@include respond-to(sm) {
+    .upper_main{
+        background-color: #fff;
+        padding-top: 1rem;
+    }
+   .status_tabs{
+    justify-content: space-around;
+    box-shadow: 0px 4px 4px 0px #0000000F;
+    background-color: #fff;
+   }
+  }

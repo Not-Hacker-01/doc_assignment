@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-finished-cards',
+  selector: 'app-top-speakers',
   imports: [CommonModule],
-  templateUrl: './finished-cards.component.html',
-  styleUrl: './finished-cards.component.scss'
+  templateUrl: './top-speakers.component.html',
+  styleUrl: './top-speakers.component.scss'
 })
-export class FinishedCardsComponent {
-  @Input() sectionData:any
+export class TopSpeakersComponent {
+  @Input() sectionData:any  
   screenWidth:any
   @HostListener('window:resize')
   onResize(){
@@ -17,4 +17,5 @@ export class FinishedCardsComponent {
   constructor(){
     this.screenWidth = window.innerWidth
   }
+
 }

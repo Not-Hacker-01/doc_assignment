@@ -1,4 +1,4 @@
-
+@import "../../../styles.scss";
 
 
 .video_name{
@@ -21,14 +21,16 @@
 }
 
 .inner_container{
+    overflow-x: auto;
     &.bg_highlight{
         background:linear-gradient(180deg,#FFD8BD,#FFFFFF) ;
         border-radius: 4px;
         padding: 1.5rem;
         overflow-x: auto;
-        .row{
-            flex-wrap: nowrap;
-        }
+    
+    }
+    .row{
+        flex-wrap: nowrap;
     }
  
 }
@@ -100,4 +102,35 @@
     color: var(--in-active-text-color);
     font-weight: 500;
     font-size: 12px;
+}
+
+@include respond-to(sm) {
+    .row{
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+    }
+    .inner_container{
+        padding:  .2rem !important;
+    }
+    .col-md-4{
+        width: 90%;
+    }
+}
+
+.overflow_highlight{
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@include respond-to(md){
+    .row{
+        flex-wrap: wrap ;
+        row-gap: 1rem;
+    }
+    .col-sm-3{
+        width: 90%;
+    }
+
 }

@@ -1,0 +1,63 @@
+@import "../../../styles.scss";
+
+.badge{
+ 
+   position: absolute;
+    padding: 3px 8px;
+    border-radius: 28px;
+  
+    width: max-content;
+    &.live{
+        background-color: var(--live-bg);
+        color: var(--white_bg);
+    }
+    position: absolute;
+    bottom: -.5rem;
+  
+  
+  }
+
+  .doctor_img{
+    width: 180px; height: 180px; object-fit: cover; border-radius: 50%;
+    border: 2px solid red;
+    padding: .5rem;
+  }
+
+  .view_profile{
+    border: 1px solid var(--header-active-text-color);
+    border-radius: 4px;
+    padding: 6px 8px;
+    width: max-content;
+    color: var(--header-active-text-color);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrapper{
+    border: 1px solid var(--srch-bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    background: linear-gradient(179deg, #d05500fa -70%, #FFFFFF 30%);
+  }
+
+  @include respond-to(sm) {
+  .col-md-3{
+    width: 90%;
+  }
+
+  .badge{
+
+     position: absolute;
+     bottom: -.5rem;
+   
+   
+   }
+  }
+
+  .bg_white{
+    background-color: white;
+  
+  }

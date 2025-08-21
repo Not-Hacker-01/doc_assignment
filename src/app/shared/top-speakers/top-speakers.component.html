@@ -1,0 +1,61 @@
+<ng-container >
+
+ <div class="bg_white px-0 py-3">
+  <div
+  class="d-flex justify-content-between align-items-center my-2"
+  [ngClass]="screenWidth < 500 ? 'px-2' : ''"
+  *ngIf="screenWidth < 500"
+>
+  <p class="fs_18 m-0" style="color: var(--header-active-text-color)">
+    {{ sectionData.type }}
+  </p>
+<div class="d-flex align-items-center gap-2">
+  <p class="m-0" [ngClass]="screenWidth < 500 ? 'fs_15' : 'view_all'">View All</p>
+  <svg *ngIf="screenWidth < 500" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.72461 0.979805C5.93885 0.784717 6.28576 0.784724 6.5 0.979805L11.6211 5.6468C11.8354 5.84206 11.8354 6.15857 11.6211 6.35383L6.5 11.0198C6.28572 11.2151 5.93889 11.2151 5.72461 11.0198C5.51036 10.8246 5.51034 10.5081 5.72461 10.3128L9.9082 6.50031H0.964844C0.676429 6.50026 0.442559 6.27628 0.442383 6.00031C0.442383 5.7242 0.67632 5.50037 0.964844 5.50031H9.9082L5.72461 1.68684C5.51033 1.49157 5.51033 1.17507 5.72461 0.979805Z" fill="#1D1919"/>
+    </svg>
+</div>
+    
+</div>
+
+  <div class="row flex-nowrap overflow-x-auto">
+      <div class="col-md-3" *ngFor="let card of sectionData.cards">
+          <div class="wrapper">
+              <div class="profile position-relative d-flex align-items-center " [ngClass]="screenWidth < 500 ? 'justify-content-center' : 'justify-content-center'">
+                  <div class="badge live d-flex align-items-center gap-2">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z"
+                          fill="white"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.03031 4.96969C6.3232 5.26258 6.3232 5.73745 6.03031 6.03035C2.73334 9.32731 2.73334 14.6728 6.03031 17.9697C6.3232 18.2626 6.3232 18.7375 6.03031 19.0304C5.73742 19.3233 5.26254 19.3233 4.96965 19.0304C1.08689 15.1476 1.08689 8.85244 4.96965 4.96969C5.26254 4.67679 5.73742 4.67679 6.03031 4.96969ZM17.9697 4.96969C18.2626 4.67679 18.7375 4.67679 19.0304 4.96969C22.9131 8.85244 22.9131 15.1476 19.0304 19.0304C18.7375 19.3233 18.2626 19.3233 17.9697 19.0304C17.6768 18.7375 17.6768 18.2626 17.9697 17.9697C21.2667 14.6728 21.2667 9.32731 17.9697 6.03035C17.6768 5.73745 17.6768 5.26258 17.9697 4.96969Z"
+                          fill="white"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.55623 7.72418C8.84038 8.02557 8.82641 8.50024 8.52502 8.78439C6.6357 10.5657 6.6357 13.4343 8.52502 15.2156C8.82641 15.4997 8.84038 15.9744 8.55623 16.2758C8.27208 16.5772 7.79742 16.5912 7.49603 16.307C4.9787 13.9336 4.9787 10.0663 7.49603 7.69297C7.79742 7.40883 8.27208 7.4228 8.55623 7.72418ZM15.4438 7.72418C15.7279 7.4228 16.2026 7.40883 16.504 7.69297C19.0213 10.0663 19.0213 13.9336 16.504 16.307C16.2026 16.5912 15.7279 16.5772 15.4438 16.2758C15.1596 15.9744 15.1736 15.4997 15.475 15.2156C17.3643 13.4343 17.3643 10.5657 15.475 8.78439C15.1736 8.50024 15.1596 8.02557 15.4438 7.72418Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <p class="m-0 fw-normal">Live</p>
+                    </div>
+                      <img [src]="card.posterImage" class="doctor_img"  alt="">
+              </div>
+              <div class="name fs_16 fw-bold  mt-2" [ngClass]="screenWidth < 500 ? 'text-start' : 'text-center'">{{card.name}}</div>
+              <div class="about fs_13 " style="color: var(--in-active-text-color);" [ngClass]="screenWidth < 500 ? 'text-start' : 'text-center'">{{card.about}}</div>
+              <div class="view_profile mt-3">view profile</div>
+          </div>
+      </div>
+  </div>
+ </div>
+</ng-container>
