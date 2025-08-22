@@ -1,10 +1,20 @@
 <div class="outer_container">
-    <div class="d-flex justify-content-between align-items-center my-2">
-      <p class="fs_18 m-0" style="color: var(--header-active-text-color)">
-        {{ sectionData.type }}
-      </p>
-      <p class="view_all">View All</p>
-    </div>
+  <div
+  class="d-flex justify-content-between align-items-center my-2"
+  [ngClass]="screenWidth < 500 ? 'px-2' : ''"
+  *ngIf="screenWidth < 500"
+>
+  <p class="fs_18 m-0" style="color: var(--header-active-text-color)">
+    {{ sectionData.type }}
+  </p>
+<div class="d-flex align-items-center gap-2">
+  <p class="m-0" [ngClass]="screenWidth < 500 ? 'fs_15' : 'view_all'">View All</p>
+  <svg *ngIf="screenWidth < 500" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.72461 0.979805C5.93885 0.784717 6.28576 0.784724 6.5 0.979805L11.6211 5.6468C11.8354 5.84206 11.8354 6.15857 11.6211 6.35383L6.5 11.0198C6.28572 11.2151 5.93889 11.2151 5.72461 11.0198C5.51036 10.8246 5.51034 10.5081 5.72461 10.3128L9.9082 6.50031H0.964844C0.676429 6.50026 0.442559 6.27628 0.442383 6.00031C0.442383 5.7242 0.67632 5.50037 0.964844 5.50031H9.9082L5.72461 1.68684C5.51033 1.49157 5.51033 1.17507 5.72461 0.979805Z" fill="#1D1919"/>
+    </svg>
+</div>
+    
+</div>
     <div class="inner_container overflow-x-auto">
       <div class="row flex-nowrap">
         <ng-container *ngFor="let card of sectionData.cards">
