@@ -276,37 +276,37 @@ export const sections = [
     cards: [
       {
         id: 1,
-        posterImage: '/doctor.png',
+        posterImage: '/doctor1.png',
         name: 'Dr Wuyama Guramg',
         about: 'Gastroenterologist, Surgeon',
       },
       {
         id: 1,
-        posterImage: '/doctor.png',
+        posterImage: '/doctor1.png',
         name: 'Dr Wuyama Guramg',
         about: 'Gastroenterologist, Surgeon',
       },
       {
         id: 1,
-        posterImage: '/doctor.png',
+        posterImage: '/doctor1.png',
         name: 'Dr Wuyama Guramg',
         about: 'Gastroenterologist, Surgeon',
       },
       {
         id: 1,
-        posterImage: '/doctor.png',
+        posterImage: '/doctor1.png',
         name: 'Dr Wuyama Guramg',
         about: 'Gastroenterologist, Surgeon',
       },
       {
         id: 1,
-        posterImage: '/doctor.png',
+        posterImage: '/doctor1.png',
         name: 'Dr Wuyama Guramg',
         about: 'Gastroenterologist, Surgeon',
       },
       {
         id: 1,
-        posterImage: '/doctor.png',
+        posterImage: '/doctor1.png',
         name: 'Dr Wuyama Guramg',
         about: 'Gastroenterologist, Surgeon',
       },
